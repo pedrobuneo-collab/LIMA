@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio Pessoal</title>
+    
+    <style>
+        /* Regras extraídas do arquivo style.CSS (Imagem 1) */
+        body {
+            font-family: cursive;
+            background-color: rgb(180, 173, 230);
+        }
+
+        .titulo_h1, #paragrafo {
+            text-align: left;
+            font-size: 36px;
+            color: rgb(0, 255, 170);
+        }
+    </style>
 </head>
 <body>
 
-    <Cabeçalho principal do site >
+    <!-- Cabeçalho principal do site -->
     <header>
-        <h1>Desenvolvedor em Formação | Meu Espaço Pessoal</h1>
+        <!-- CSS Inline idêntico ao da Imagem 2 aplicado no H1 principal -->
+        <h1 style="color: blue; background-color: rgb(177, 108, 231); text-align: center; font-family: Arial, 'Helvetica Neue', sans-serif;">
+            Desenvolvedor em Formação | Meu Espaço Pessoal
+        </h1>
     </header>
 
-    <Conteúdo principal da página>
+    <!-- Conteúdo principal da página -->
     <main>
         
-        <Seção: Sobre Mim>
+        <!-- Seção: Sobre Mim -->
         <section id="sobre-mim">
-            <h2>Sobre Mim</h2>
-            <p>
-                Olá! Meu nome é Pedro, e sou um estudante da area de tecnologia com foco em desenvolvimento web. 
+            <h2 class="titulo_h1">Sobre Mim</h2>
+            
+            <!-- ID "paragrafo" aplicado para utilizar o estilo do CSS externo da Imagem 1 -->
+            <p id="paragrafo">
+                Olá! Meu nome é Pedro, e sou um estudante da área de tecnologia com foco em desenvolvimento web. 
                 Atualmente, estou aprimorando minhas habilidades em HTML, CSS e JavaScript, buscando sempre 
                 aprender novas tecnologias e frameworks para criar experiências digitais inovadoras.
             </p>
             <p>
-                Meu objetivo profissional é atuar na área de mecanico a diesel e flex, Atualmente ja possuo experiencia na area,
+                Meu objetivo profissional é atuar na área de mecânico a diesel e flex. Atualmente já possuo experiência na área,
                 e busco sempre me atualizar e aprender novas técnicas para oferecer um serviço de qualidade.
             </p>
         </section>
 
-        <Seção: Hobbies>
+        <!-- Seção: Hobbies -->
         <section id="hobbies">
-            <h2>Hobbies e Interesses</h2>
-            <p>No meu tempo livre, gosto de realizar atividades ao que exijam sair de casa, sair do padrão do dia a dia, e interação social. 
-                Alguns dos meus hobbies incluem:</p>
+            <h2 class="titulo_h1">Hobbies e Interesses</h2>
+            <p>
+                No meu tempo livre, gosto de realizar atividades que exijam sair de casa, sair do padrão do dia a dia, e interação social. 
+                Alguns dos meus hobbies incluem:
+            </p>
             <ul>
                 <li><strong>andar de bike:</strong> ir para outras cidades.</li>
                 <li><strong>sair com os amigos:</strong> uma forma de relaxar e socializar.</li>
@@ -43,7 +64,7 @@
 
     </main>
 
-    <Rodapé da página>
+    <!-- Rodapé da página -->
     <footer>
         <p>&copy; 2026 Meu Espaço Pessoal. Todos os direitos reservados.</p>
     </footer>
