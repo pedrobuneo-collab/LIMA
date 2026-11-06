@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PixelGear - Loja especializada em PC Gamer, Periféricos e Setups eSports.">
+    <title>PixelGear | High Performance Gaming</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Cabeçalho -->
+        <header>
+            <h1>PixelGear eSports Store</h1>
+            <p>Sua loja de alta performance em eSports.</p>
+        </header>
+
+        <!-- Missão, Visão e Valores -->
+        <section>
+            <h2>Sobre Nós</h2>
+            <article class="about-grid">
+                <div class="about-item">
+                    <strong>Missão</strong>
+                    <p>Entregar os melhores PCs Gamers com performance máxima.</p>
+                </div>
+                <div class="about-item">
+                    <strong>Visão</strong>
+                    <p>Ser a loja nº 1 da América Latina em hardware gamer.</p>
+                </div>
+                <div class="about-item">
+                    <strong>Valores</strong>
+                    <p>Qualidade extrema, inovação contínua e transparência total.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Destaques -->
+        <section>
+            <h2>Destaques</h2>
+            <div class="grid-products">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400" alt="PC Gamer Apex com iluminação RGB">
+                    <h3>PC Gamer Apex</h3>
+                    <p><strong>Processador:</strong> Core i9 | <strong>Placa:</strong> RTX 4090</p>
+                    <p><span class="price-old">De R$ 20.000</span> por <span class="price-new">R$ 16.999</span> à vista!</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400" alt="Teclado Mecânico Wireless Pro Gamer">
+                    <h3>Teclado Wireless Pro</h3>
+                    <p>Ideal para <i>CS2</i> e <i>VALORANT</i>.</p>
+                    <p><span class="price-old">De R$ 1.200</span> por <span class="price-new">R$ 899</span> à vista!</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabela de Comparação de Produtos -->
+        <section>
+            <h2>Tabela de Produtos</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Modelo</th>
+                            <th>Processador</th>
+                            <th>Placa de Vídeo</th>
+                            <th>Memória RAM</th>
+                            <th>Preço no PIX</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=150" alt="Notebook Gamer" width="80" height="60">
+                            </td>
+                            <td>Notebook Gamer</td>
+                            <td>Intel i7</td>
+                            <td>RTX 3080</td>
+                            <td>16GB</td>
+                            <td><strong>R$ 8.999,90</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=150" alt="Desktop Gamer" width="80" height="60">
+                            </td>
+                            <td>Desktop Gamer</td>
+                            <td>AMD Ryzen 9</td>
+                            <td>RTX 4090</td>
+                            <td>32GB</td>
+                            <td><strong>R$ 15.999,90</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro e Orçamento -->
+        <section>
+            <h2>Solicite um Orçamento</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Dados do Usuário</legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp:</label>
+                        <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <fieldset>
+                        <legend>Adicionais Desejados</legend>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item" for="garantia-estendida">
+                                <input type="checkbox" id="garantia-estendida" name="adicionais[]" value="garantia-estendida">
+                                Garantia Estendida
+                            </label>
+                            <label class="checkbox-item" for="overclock">
+                                <input type="checkbox" id="overclock" name="adicionais[]" value="overclock">
+                                Overclock de Fábrica
+                            </label>
+                            <label class="checkbox-item" for="fita-led-rgb">
+                                <input type="checkbox" id="fita-led-rgb" name="adicionais[]" value="fita-led-rgb">
+                                Fita LED RGB Adicional
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações ou Dúvidas Específicas:</label>
+                        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva jogos específicos que pretende rodar ou preferências de marcas..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto_referencia">Anexar Print ou Foto do Setup de Referência:</label>
+                        <input type="file" id="foto_referencia" name="foto_referencia" accept="image/*">
+                    </div>
+                </fieldset>
+
+                <div class="btn-container">
+                    <button type="submit">Enviar Solicitação</button>
+                    <button type="reset">Limpar Campos</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2026 PixelGear eSports Store — Todos os direitos reservados.</p>
+            <blockquote>"Desempenho não é um luxo, é uma necessidade." — <small>PixelGear Team</small></blockquote>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
