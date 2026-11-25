@@ -1,0 +1,509 @@
+:root {
+    --azul-marinho: #10243e;
+    --azul: #1677b9;
+    --azul-claro: #eaf3f9;
+    --laranja: #ff7a1a;
+    --verde: #1f7a4c;
+    --cinza-claro: #f4f6f8;
+    --cinza-borda: #d8e0e7;
+    --branco: #ffffff;
+    --texto: #1d2a38;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    background: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+code {
+    color: #165d8a;
+    background: #edf4f8;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.topo {
+    color: var(--branco);
+    background:
+        linear-gradient(135deg, rgba(16, 36, 62, 0.96), rgba(16, 36, 62, 0.72)),
+        radial-gradient(circle at 75% 30%, #2d91c6 0 3px, transparent 4px);
+    background-color: var(--azul-marinho);
+}
+
+.cabecalho,
+.hero,
+.secao,
+footer {
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.cabecalho {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.12rem;
+    font-weight: 800;
+}
+
+.marca-icone {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 2px solid var(--laranja);
+    border-radius: 50%;
+    color: var(--laranja);
+    font-size: 0.75rem;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #ffb27a;
+}
+
+.hero {
+    min-height: 390px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    align-items: center;
+    gap: 40px;
+}
+
+.etiqueta {
+    color: #ffc79f;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 690px;
+    margin: 8px 0 16px;
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
+    line-height: 1.02;
+}
+
+.subtitulo {
+    margin: 0 0 28px;
+    color: #dce8f1;
+    font-size: 1.08rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 4px;
+    color: var(--branco);
+    background: var(--laranja);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.botao:hover,
+.botao:focus-visible {
+    background: #e45f00;
+}
+
+.hero-destaque {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-destaque strong {
+    color: #ffad70;
+    font-size: 3.7rem;
+    line-height: 1;
+}
+
+.secao {
+    padding-block: 72px;
+}
+
+.titulo-secao {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.titulo-secao p {
+    margin: 0;
+    color: var(--laranja);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.titulo-secao h2 {
+    margin: 6px 0 0;
+    color: var(--azul-marinho);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.grade-listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-lista {
+    min-height: 390px;
+    padding: 26px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+    background: var(--branco);
+}
+
+.card-lista h3 {
+    color: var(--azul-marinho);
+}
+
+.card-lista > p {
+    min-height: 78px;
+    color: #5c6975;
+    font-size: 0.92rem;
+}
+
+.lista-esportiva,
+.lista-esportiva ul {
+    margin-block: 10px;
+}
+
+.lista-esportiva > li {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.lista-esportiva ul {
+    padding-left: 22px;
+    color: #53616d;
+    font-weight: 400;
+}
+
+.lista-esportiva ul li::marker {
+    color: var(--laranja);
+}
+
+.lista-passos {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: passos;
+}
+
+.lista-passos li {
+    position: relative;
+    min-height: 58px;
+    padding-left: 58px;
+    counter-increment: passos;
+}
+
+.lista-passos li::before {
+    content: counter(passos);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--branco);
+    background: var(--azul);
+    font-weight: 800;
+}
+
+.lista-passos strong,
+.lista-passos span {
+    display: block;
+}
+
+.lista-passos span {
+    color: #64717d;
+    font-size: 0.86rem;
+}
+
+.lista-definicoes dt {
+    margin-top: 12px;
+    color: var(--azul-marinho);
+    font-weight: 800;
+}
+
+.lista-definicoes dd {
+    margin: 3px 0 0;
+    padding-left: 12px;
+    border-left: 3px solid var(--laranja);
+    color: #64717d;
+    font-size: 0.92rem;
+}
+
+.secao-tabela {
+    width: 100%;
+    max-width: none;
+    padding-inline: max(20px, calc((100% - 1120px) / 2));
+    background:
+        linear-gradient(rgba(244, 247, 250, 0.96), rgba(244, 247, 250, 0.96)),
+        linear-gradient(45deg, #dbe7ef 25%, transparent 25%);
+}
+
+.tabela-container {
+    overflow-x: auto;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+    background: var(--branco);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.catalogo,
+.encadeada {
+    min-width: 760px;
+}
+
+.catalogo caption {
+    padding: 12px;
+    color: #526170;
+    background: var(--branco);
+    caption-side: top;
+    font-size: 0.88rem;
+}
+
+.catalogo thead,
+.encadeada thead {
+    color: var(--branco);
+    background: var(--azul-marinho);
+}
+
+.catalogo th,
+.catalogo td,
+.encadeada th,
+.encadeada td {
+    border: 1px solid var(--cinza-borda);
+}
+
+.catalogo tbody tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+.catalogo tbody tr:hover {
+    background: #edf6fb;
+}
+
+.catalogo tbody th {
+    text-align: left;
+}
+
+.codigo {
+    display: block;
+    margin-bottom: 4px;
+    color: #748291;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+}
+
+.preco {
+    color: var(--azul-marinho);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.disponivel {
+    color: #155d3b;
+    background: #daf1e5;
+}
+
+.limitado {
+    color: #8a4900;
+    background: #ffe5c2;
+}
+
+.acao {
+    color: var(--azul);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.acao:hover,
+.acao:focus-visible {
+    text-decoration: underline;
+}
+
+.linha-destaque {
+    color: #6d3a08;
+    background: #fff1df;
+}
+
+.encadeada {
+    background: var(--branco);
+}
+
+.encadeada td {
+    background: var(--branco);
+}
+
+.tabela-interna {
+    background: var(--branco);
+}
+
+.tabela-interna th {
+    color: var(--azul-marinho);
+    background: var(--azul-claro);
+}
+
+.explicacao {
+    padding-bottom: 82px;
+}
+
+.grade-explicacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.grade-explicacao div {
+    padding: 20px;
+    border-left: 4px solid var(--azul);
+    background: var(--cinza-claro);
+}
+
+.grade-explicacao h3 {
+    margin: 0 0 6px;
+    color: var(--azul-marinho);
+}
+
+.grade-explicacao p {
+    margin: 0;
+}
+
+footer {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--cinza-borda);
+}
+
+footer p {
+    margin: 0;
+    color: #697683;
+}
+
+footer a {
+    color: var(--azul);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 850px) {
+    .grade-listas {
+        grid-template-columns: 1fr;
+    }
+
+    .card-lista {
+        min-height: auto;
+    }
+
+    .card-lista > p {
+        min-height: auto;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-block: 48px;
+    }
+
+    .hero-destaque {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho,
+    .hero,
+    .secao,
+    footer {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .cabecalho {
+        height: auto;
+        padding-block: 18px;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 4px;
+        text-align: right;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .grade-explicacao {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .secao-tabela {
+        width: 100%;
+        max-width: none;
+        padding-inline: 14px;
+    }
+}
